@@ -12,6 +12,7 @@ def line_example(data):
 
 def grad_descent(data, line, learning_rate=0.01, iterations=100):
     m, c = line
+    history = []
     for i in range(iterations):
         grad_m = 0
         grad_c = 0
@@ -23,10 +24,13 @@ def grad_descent(data, line, learning_rate=0.01, iterations=100):
         m -= learning_rate * grad_m
         c -= learning_rate * grad_c
         
-        rss = sum((y - (m * x + c))**2 for x, y in data)
-        print(f"Iteration: RSS={rss:.4f}, m={m:.4f}, c={c:.4f}")
+        # rss = sum((y - (m * x + c))**2 for x, y in data)
+        # print(f"Iteration: RSS={rss:.4f}, m={m:.4f}, c={c:.4f}")
+        loss = sum((y - (m * x + c))**2 for x, y in data)
+        history.append({'m' : m, 'c' : c, 'loss' : loss})
+        print(f"Iteration {i + 1}: m={m}, c={c}, loss={loss}")
     
-    return m, c
+    return history, m, c
         
 if __name__ == '__main__':
     data = data_example()
