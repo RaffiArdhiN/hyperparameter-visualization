@@ -1,6 +1,6 @@
 # Hyperparameter Visualization
 
-This project provides a visualization tool to demonstrate the process of **Gradient Descent**, a fundamental optimization algorithm in machine learning. The application allows users to experiment with hyperparameters like learning rate and iterations, while visually observing the optimization process.
+This project provides a Visualization tool to demonstrate the process of **Gradient Descent**, a fundamental optimization algorithm in machine learning. The application allows users to experiment with hyperparameters like learning rate and iterations, while visually observing the optimization process.
 
 ## Features
 - **Interactive Form**: Input custom data points, learning rate, and the number of iterations.
@@ -18,8 +18,8 @@ This project provides a visualization tool to demonstrate the process of **Gradi
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/RaffiArdhiN/hyperparameter-visualization.git
-   cd hyperparameter-visualization
+   git clone https://github.com/RaffiArdhiN/Hyperparameter_Visualization.git
+   cd Hyperparameter_Visualization
    ```
 
 2. Create a virtual environment (optional but recommended):
@@ -45,7 +45,7 @@ This project provides a visualization tool to demonstrate the process of **Gradi
 
 ## Project Structure
 ```
-hyperparameter-visualization/
+Hyperparameter_Visualization/
 ├── app.py                # Main Flask application
 ├── gradient_descent.py   # Gradient Descent logic
 ├── templates/
@@ -64,6 +64,9 @@ hyperparameter-visualization/
    - **Learning Rate**: Controls the step size during optimization.
    - **Iterations**: Number of steps for the Gradient Descent algorithm.
 3. **Run Gradient Descent**: Click "Run Gradient Descent" to execute the optimization process.
+
+![Demo](assets/demo.gif)
+
 4. **View Results**:
    - Observe the optimized line equation (`y = mx + c`).
    - Analyze the trajectory of parameters `m` and `c` on the visualization graph.
